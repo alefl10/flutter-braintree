@@ -24,6 +24,12 @@ subprojects {
     project.evaluationDependsOn(':app')
 }
 
+configurations.all {
+    resolutionStrategy {
+        force 'com.braintreepayments.api:data-collector:4.31.0'
+    }
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
